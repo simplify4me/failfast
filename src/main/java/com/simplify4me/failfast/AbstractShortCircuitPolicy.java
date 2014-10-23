@@ -11,7 +11,9 @@ public abstract class AbstractShortCircuitPolicy implements ShortCircuitPolicy {
     }
 
     public boolean shortCircuit() {
-        if (this.shortCircuitPolicy != null && this.shortCircuitPolicy.shortCircuit()) return true;
+        if (this.shortCircuitPolicy != null && this.shortCircuitPolicy.shortCircuit()) {
+            return true;
+        }
         return checkShortCircuit();
     }
 
